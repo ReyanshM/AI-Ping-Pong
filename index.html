@@ -19,17 +19,17 @@
     <center>
         <div class="btn-primary" style="padding:15px;width:100%;">
             <h1 style="display:inline;">AI Ping Pong Game</h1>
-            <button data-target="myModal" data-toggle="modal" class="btn-primary" style="border-radius:5px;margin-right:10px;color:white;border:1px solid white;float:right;padding:3px;">Instructions</button>
+            <button data-target="#myModal" data-toggle="modal" class="btn-primary" style="border-radius:5px;margin-right:10px;color:white;border:1px solid white;float:right;padding:3px;">Instructions</button>
         </div>
         <br>
+        <br>
+        <button class="btn btn-success" onclick="play()">Play</button>
         <br>
         <div id="status"></div>
         <br>
         <div id="game"></div>
         <br>
-        <button class="btn btn-success" onclick="play()">Play</button>
-        <br>
-        <h3 class="btn btn-warning"></h3>
+        <h3 class="btn btn-danger">Restart</h3>
         <footer style="margin-top:20px;font-size:16px;font-weight:700;width:100%;padding:5px;background-color:rgb(109, 95, 95);bottom:0;position:fixed;z-index:100;">Source code : <a href="https://github.com/linuk">Linuk</a> || Game Credit : Mario</footer>
         <div id="myModal" class="modal fade">
             <div style="width:90%;" class="modal-dialog">
@@ -39,7 +39,7 @@
                         <h2 style="color:black;">Instructions</h2>
                     </div>
                     <div class="modal-body">
-                        <h2 style="color:black;">
+                        <h3 style="color:black;">
                             1. First keep your laptop screen straight
                             2. Move yourself approximately 3-4 feet away from the laptop
                             3. Move your right wrist in an ascending and decending manner, a red dot should appear on your right wrist
