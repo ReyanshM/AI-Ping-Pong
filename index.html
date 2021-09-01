@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ping pong Game (AI)</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="ml5.min.js"></script>
-    <script src="p5.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> -->
+    <!-- <script src="ml5.min.js"></script>
+    <script src="p5.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
 </head>
 <body background="background1.jpg" style="padding-bottom:20px;background-size:cover;">
     <center>
         <div class="btn-primary" style="padding:15px;width:100%;">
-            <h1 style="display:inline;">AI Ping Pong Game</h1>
+            <h1 style="display:inline;font-family: 'Knewave', cursive;color:black;font-size:40px;">AI Ping Pong Game</h1>
             <button data-target="#myModal" data-toggle="modal" class="btn-primary" style="border-radius:5px;margin-right:10px;color:white;border:1px solid white;float:right;padding:3px;">Instructions</button>
         </div>
         <br>
@@ -29,7 +31,7 @@
         <br>
         <div id="status"></div>
         <br>
-        <div style="width:600px;height:600px;border:2px white solid;box-shadow:15px 10px;" id="game"></div>
+        <div style="width:500px;height:500px;border:2px white solid;box-shadow:15px 15px;" id="game"></div>
         <br>
         <br>
         <br>
@@ -43,11 +45,15 @@
                         <h2 style="color:black;">Instructions</h2>
                     </div>
                     <div class="modal-body">
-                        <h3 style="color:black;">
+                        <h3 style="text-align:left;padding-left:30px;color:black;">
                             1. First keep your laptop screen straight
+                            <br>
                             2. Move yourself approximately 3-4 feet away from the laptop
+                            <br>
                             3. Move your right wrist in an ascending and decending manner, a red dot should appear on your right wrist
+                            <br>
                             4. Now press the play button, and again move yourself 3-4 feet away from laptop
+                            <br>
                             5. The red paddel is your paddel, that will move as per the movement of your right wrist
                         </h2>
                     </div>
