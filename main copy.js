@@ -10,7 +10,7 @@ var score1 = 0, score2 =0;
 var paddle1Y;
 
 var  playerscore =0;
-var video;
+
 var pcscore =0;
 //ball x and y and speedx speed y and radius
 var ball = {
@@ -25,25 +25,27 @@ rightWristY = 0;
 rightWristX = 0;
 scoreRightWrist = 0;
 
-gameStatus="";
+game_status="";//Define a variable to hold the status of the game
 
  
 
 function setup(){
-  canvas=createCanvas(700,600);
-  canvas.parent('game');
-  video=createCapture(VIDEO);
-	video.size(700,600);
-  video.hide();
-  posenet=ml5.poseNet(video, modelLoaded);
-  posenet.on('pose', results);
+var canvas =  createCanvas(700,600);
+canvas.parent('canvas');
+
+video = createCapture(VIDEO);
+video.size(700, 600);
+video.hide();
+
+poseNet = ml5.poseNet(video, modelLoaded);
+poseNet.on('pose', gotPoses);
 }
 
 function modelLoaded() {
   console.log('The modal is loaded');
 }
 
-function results(results)
+function gotPoses(results)
 {
   if(results.length > 0)
   {
@@ -57,15 +59,15 @@ function results(results)
 
 function startGame()
 {
-  gameStatus="start";
-  document.getElementById('status').textContent="Game is loaded";
+  game_status="start";//Set the value of the status variable created in step 1 to “start”.
+  document.getElementById("status").innerHTML="The game is loaded";//Update the h3 tag which we have created inside index.html file in project 138 who has id “status” to "Game Is Loaded”.
 }
 
 function draw(){
-if(gameStatus=="start")
+if(game_status=="start") // inside the if condition check if the game_status is equal to the value "start".
 {
   background(0); 
-  image(video,0,0,700,600);
+  image(video, 0, 0, 700, 600);
 
   fill("black");
   stroke("black");
